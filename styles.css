@@ -1,0 +1,478 @@
+/* The CSS rule below will affect every HTML element on the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* vh and vw are relative to the viewport's height and width, respectively.
+The benefit of using relative units is that with some careful planning you can make it so the size of text or other elements scales relative to everything else on the page */
+section {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+section nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px #f5c367;
+    /* it will basically provide shadow to the box */
+
+    background-color: #f7e29f;
+    position: fixed;
+}
+
+/* Always be specific because there will be many images coming up in the website */
+section nav .logo img {
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    /*a pointer will appear when we hover the logo */
+    margin: 8px 0;
+    /* left-right top-down*/
+}
+
+section nav ul {
+    list-style: none;
+}
+
+section nav li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+section nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+section nav li a:hover {
+    color: #a63d27;
+}
+
+section nav .icons i {
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+section nav .icons i:hover {
+    color: #a63d27;
+    cursor: pointer;
+}
+
+section .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    /*relative means it will be relative, here the para contains space from left to right , therefore image is pushed to right*/
+
+    top: 20%;
+    /*it will add space 10% from top*/
+}
+
+section .main h1 {
+    position: relative;
+    font-size: 50px;
+    top: 80px;
+    left: 25px;
+}
+
+section .main h1 span {
+    color: #a63d27;
+}
+
+section .main p {
+    width: 650px;
+    text-align: justify;
+    /*it will adjust the entire paragraph in a box*/
+
+    line-height: 22px;
+    /*space between each line*/
+
+    position: relative;
+    top: 125px;
+    left: 25px;
+}
+
+section .main .main_tag .main_btn {
+    background-color: #f5c367;
+    border: #a63d27;
+    padding: 10px 20px;
+    position: relative;
+    top: 150px;
+    left: 25px;
+    color: #a63d27;
+    text-decoration: none;
+}
+
+section .main .main_img {
+    width: 780px;
+    position: relative;
+    top: 90px;
+    left: 100px;
+}
+
+
+
+/* Services */
+
+/* Making a section for services */
+.services {
+    width: 100%;
+    height: auto;
+    /*Instead of providing particular height its better that give the text to adjust their height by making the height "auto" */
+
+    margin: 35px 0;
+}
+
+/* Providing each card of services with a particular space */
+.services .service_box {
+    width: 95%;
+    /*in each card-section the text will be given only percent of the space*/
+
+
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services .service_box .service_card {
+    text-align: center;
+    width: 310px;
+    height: auto;
+    box-shadow: 0 0 8px #f5c367;
+    padding: 15px 10px;
+}
+
+.services .service_box .service_card i {
+    color: #f5c367;
+    font-size: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.services .service_box .service_card h3 {
+    color: #a63d27;
+    margin-bottom: 10px;
+}
+
+
+/* About Us */
+
+.about {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_img img {
+    width: 780px;
+}
+
+.about .about_tag h1 {
+    color: #a63d27;
+    position: relative;
+    bottom: 35px;
+}
+
+.about .about_tag p {
+    line-height: 22px;
+    width: 650px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.about .about_tag .about_btn {
+    background-color: #f5c367;
+    border: #a63d27;
+    padding: 10px 20px;
+    position: relative;
+    top: 25px;
+    left: 5px;
+    color: #a63d27;
+    text-decoration: none;
+}
+
+
+/* Featured Books */
+
+.featured {
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.featured h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: #a63d27;
+}
+
+.featured .featured_box {
+    width: 95%;
+    height: 60vh;
+    margin: 0 auto;
+    display: grid;
+    /*The CSS grid layout module excels at dividing a page into major regions or defining the relationship in terms of size, position, and layering between parts of a control built from HTML primitives.*/
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /*This will give the size to each element of the box equal size of 1fr "in a column format" */
+
+    overflow: hidden;
+    /*it will just crop out the overflowing part*/
+
+    overflow-x: scroll;
+    /*it will provide scrolling in X-direction*/
+
+
+}
+
+
+.featured .featured_box .featured_card {
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid #a63d27;
+    margin: auto 20px;
+}
+
+.featured h1 {
+    color: #a63d27;
+    position: relative;
+    font-size: 50px;
+    top: 80px;
+
+}
+
+.featured .featured_box .featured_card:hover {
+    box-shadow: 0 0 5px #a63d27;
+    background-color: #f7e29f;
+    transition: 0.5s;
+}
+
+.featured .featured_box .featured_card .featured_img img {
+    /*You should be specific always*/
+
+    width: 150px;
+    cursor: pointer;
+}
+
+.featured .featured_box .featured_card .featured_tag {
+    margin: 12px;
+}
+
+.featured .featured_box .featured_card .featured_tag .featured_writer {
+    color: #a63d27;
+}
+
+.featured .featured_box .featured_card .featured_tag .categories {
+    color: #a63d27;
+    margin-top: 8px;
+}
+
+.featured .featured_box .featured_card .featured_tag .book_price {
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.featured .featured_box .featured_card .featured_tag .book_price sub {
+    font-weight: 100;
+    padding: 0 5px;
+}
+
+.featured .featured_box .featured_card .featured_tag .featured_btn {
+    padding: 8px 20px;
+    border: 2px solid #a63d27;
+    text-decoration: none;
+    color: #a63d27;
+    border-radius: 15px;
+}
+
+.featured .featured_box .featured_card .featured_tag .featured_btn:hover {
+    background-color: #a63d27;
+    color: white;
+}
+
+/*Just a normal scroll bar but it is not considered as the standard scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+
+/*the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.*/
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #a63d27;
+    border-radius: 10px;
+}
+
+
+/* Arrivals */
+
+.arrivals {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 35px;
+}
+
+.arrivals h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+    color: #a63d27;
+}
+
+.arrivals .arrivals_box {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /*how many books should come in one line*/
+
+
+    grid-gap: 25px 0;
+    /*it will provide gap between elements column wise*/
+}
+
+.arrivals .arrivals_box .arrivals_card {
+    width: 250px;
+    height: 340px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #a63d27;
+    margin: auto 20px;
+}
+
+.arrivals .arrivals_box .arrivals_card:hover {
+    box-shadow: 0 0 5px #a63d27;
+    background-color: #f7e29f;
+    transition: 0.5s;
+}
+
+
+.arrivals .arrivals_box .arrivals_card .arrivals_img {
+    width: 150px;
+    height: 220px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*Cover the entire space */
+
+    object-position: center;
+    transition: 0.3s;
+}
+
+.arrivals .arrivals_box .arrivals_card:hover .arrivals_img img {
+    transform: scale(1.1);
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tags p {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tags .arriavls_icons i {
+    color: #a63d27;
+    margin-bottom: 18px;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tags .arrivals_btn {
+    padding: 8px 20px;
+    border: 2px solid #a63d27;
+    text-decoration: none;
+    color: black;
+    border-radius: 15px;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tags .arrivals_btn:hover {
+    background-color: #a63d27;
+    color: white;
+}
+
+
+/* REVIEWS */
+
+.reviews {
+    width: 100%;
+    height: auto;
+}
+
+.reviews h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 55px;
+}
+
+.reviews .review_box {
+    width: 95%;
+    height: 50vh;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews .review_box .review_card .card_top img {
+    /*You should be specific always*/
+
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.reviews .review_box .review_card {
+    width: 400px;
+    height: 320px;
+    box-shadow: 0 0 8px #a63d27;
+    padding: 15px;
+    margin: 0 12px;
+}
+
+.reviews .review_box .review_card i {
+    color: #a63d27;
+    font-size: 16px;
+    float: left;
+    margin-top: 1px;
+    color: #a63d27;
+    padding: 0 1px;
+}
+
+
+.reviews .review_box .review_card p {
+    margin: 10px 0 10px 0;
+    text-align: justify;
+    /*It will basically spread out the text in given space*/
+
+
+    line-height: 22px;
+}
